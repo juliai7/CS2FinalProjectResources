@@ -16,6 +16,11 @@ class Ball
     private Color color;
 
     // Constructors
+    public Ball()
+    {
+        this(200, 300,0,0, 10, Color.RED);
+    }
+
     public Ball(int xIn, int yIn, int dxIn, int dyIn, int radiusIn, Color colorIn)
     {
         x = xIn;
@@ -27,6 +32,26 @@ class Ball
     }
 
     // Methods
+
+    public int getX()
+    {
+        return x;
+    }
+
+    public int getY()
+    {
+        return y;
+    }
+    public void setCenter(int xIn, int yIn)
+    {
+        x = xIn;
+        y = yIn;
+    }
+
+    public void setColor(Color colorIn)
+    {
+        color = colorIn;
+    }
 
     /**
      * Shift the ball by the given amount in the x direction.
