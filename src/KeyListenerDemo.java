@@ -103,6 +103,20 @@ public class KeyListenerDemo implements KeyListener {
             case KeyEvent.VK_DOWN:
                 b.shiftY(STEP_SIZE, 0, KeyListenerDemoView.SCREEN_HEIGHT);
                 break;
+            case KeyEvent.VK_Z:
+                b.shiftX((int)((Math.random() * 400) - 200), 0 ,KeyListenerDemoView.SCREEN_WIDTH);
+                b.shiftY((int)((Math.random() * 400) - 200),0, KeyListenerDemoView.SCREEN_HEIGHT);
+                break;
+            case KeyEvent.VK_S:
+                b.setRadius(b.getRadius()/2);
+                break;
+            case KeyEvent.VK_B:
+                b.setRadius(b.getRadius() * 2);
+                break;
+            case KeyEvent.VK_C:
+                Color c = new Color((int) (Math.random() * 255), (int) (Math.random() * 255),(int) (Math.random() * 255));
+                b.setColor(c);
+                break;
         }
         window.repaint();
     }

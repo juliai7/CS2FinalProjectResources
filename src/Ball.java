@@ -44,6 +44,14 @@ public class Ball
         y = y + dy;
     }
 
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
     public boolean bounce(int xLow, int xHigh, int yLow, int yHigh) {
         // Check for an x bounce.  Note that we bounce if the x is too
         //  low or too high AND IS HEADING IN THE WRONG DIRECTION.
